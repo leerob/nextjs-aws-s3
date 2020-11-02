@@ -6,7 +6,9 @@
   },
   "scripts": {
     "cdk": "cdk",
-    "dev": "next"
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
   },
   "dependencies": {
     "@aws-cdk/aws-s3": "^1.71.0",
