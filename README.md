@@ -19,6 +19,7 @@ Retrieve your existing access key, secret key, S3 bucket region and name. Provid
 1. Create an `.env.local` file similar to `.env.example`.
 1. Run `cdk deploy` to create an S3 bucket with the correct CORS settings.
 1. Visit your newly created S3 bucket and retrieve the name and region.
+1. Add the name and region to `.env.local`.
 1. Run `yarn dev` to start the Next app at `localhost:3000`.
 1. Choose a `.png` or `.jpg` file.
 1. You should see your file successfully uploaded to S3.
