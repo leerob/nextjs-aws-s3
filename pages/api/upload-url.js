@@ -9,11 +9,16 @@ export default async function handler(req, res) {
   });
 
   const s3 = new aws.S3();
-  const url = await s3.getSignedUrlPromise('putObject', {
+  const post = await s3.createPresignedPost({
     Bucket: process.env.BUCKET_NAME,
-    Key: req.query.file,
+    Fields: {
+      key: req.query.file,
+    },
     Expires: 60, // seconds
+    Conditions: [
+      ['content-length-range', 0, 8000000], // up to 1 MB
+    ],
   });
 
-  res.status(200).json({ url });
+  res.status(200).json(post);
 }

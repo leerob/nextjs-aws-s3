@@ -14,6 +14,8 @@ This is an example of a Next.js application allowing you to upload photos to an 
 1. Choose a `.png` or `.jpg` file.
 1. You should see your file successfully uploaded to S3.
 
+This example uses [`createPresignedPost`](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#createPresignedPost-property) instead of [`getSignedUrlPromise`](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getSignedUrlPromise-property) to allow setting max/min file sizes with `content-length-range`.
+
 ## Commands
 
 - `yarn dev` – Starts the Next.js app at `localhost:3000`.
