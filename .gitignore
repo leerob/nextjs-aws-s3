@@ -1,6 +1,0 @@
-node_modules
-.cdk.staging
-cdk.out
-.next
-.env.local
-.DS_Store
